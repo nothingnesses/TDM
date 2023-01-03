@@ -32,13 +32,13 @@ fn min_max() {
 	let mut numbers = vec![];
 	let mut number = 0.0;
 	while number != -1.0 {
-		print!("Input a number: ");
+		print!("Please input a number: ");
 		io::stdout().flush().unwrap();
 		if let Ok(number_parsed) = stdin.lock().lines().next().unwrap().unwrap().trim().parse() {
 			number = number_parsed;
 			numbers.push(number_parsed);
 		} else {
-			println!("Invalid input. Please input a number.");
+			println!("Invalid input.");
 		}
 	}
 	numbers.sort_by(f64::total_cmp);
